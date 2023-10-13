@@ -54,10 +54,22 @@ public class Biblioteca {
         return true;
     }
 
+    public boolean podeEmprestarItem(Item item) {
+        for (Movimentacao mov : movimentacoes) {
+            // Checar se o item já está emprestado e não foi devolvido
+            if (mov.getItemEmprestado().equals(item) && mov.getDataDevolucao() == null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void emprestarItem(Usuario usuario, Item item, String dataEmprestimo) {
-        if (podeEmprestar(usuario)) {
+        if (podeEmprestar(usuario) && podeEmprestarItem(item)) {
             Movimentacao mov = new Movimentacao(usuario, item, dataEmprestimo);
             movimentacoes.add(mov);
+        } else {
+            System.out.println("Não é possível realizar o empréstimo. Verifique as condições.");
         }
     }
 
@@ -127,6 +139,22 @@ public class Biblioteca {
             }
         }
         return null;
+    }
+
+    public Usuario buscarUsuarioPorCPF(String cpf) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getCpf().equalsIgnoreCase(cpf)) {
+                return usuario;
+            }
+        }
+        return null;
+    }
+
+    public void mostrarUsuarios() {
+        System.out.println("Lista de Usuários:");
+        for (Usuario user : usuarios) {
+            System.out.println(user);
+        }
     }
 
 
