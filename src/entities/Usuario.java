@@ -6,6 +6,13 @@ public class Usuario {
     private String dataNascimento;
     private boolean isAdulto;
 
+    // Construtor
+    public Usuario(String nome, String cpf, String dataNascimento, boolean isAdulto) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.dataNascimento = dataNascimento;
+        this.isAdulto = isAdulto;
+    }
 
     public String getNome() {
         return nome;
@@ -31,14 +38,13 @@ public class Usuario {
         this.dataNascimento = dataNascimento;
     }
 
-    public boolean isAdulto() {
+    public boolean getIsAdulto() {
         return isAdulto;
     }
 
-    public void setAdulto(boolean adulto) {
-        isAdulto = adulto;
+    public void setIsAdulto(boolean isAdulto) {
+        this.isAdulto = isAdulto;
     }
-
 
     @Override
     public String toString() {
