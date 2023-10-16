@@ -56,7 +56,6 @@ public class Biblioteca {
 
     public boolean podeEmprestarItem(Item item) {
         for (Movimentacao mov : movimentacoes) {
-            // Checar se o item já está emprestado e não foi devolvido
             if (mov.getItemEmprestado().equals(item) && mov.getDataDevolucao() == null) {
                 return false;
             }

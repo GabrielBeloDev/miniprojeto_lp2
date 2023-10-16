@@ -12,7 +12,7 @@ public class Movimentacao {
         this.itemEmprestado = itemEmprestado;
         this.dataEmprestimo = dataEmprestimo;
         this.dataDevolucao = null;
-        this.statusLeitura = "Não Lido"; // Valor padrão ao criar uma movimentação,lido, igual
+        this.statusLeitura = "Não Lido"; // Valores padrões 'Lido' e 'Não Lido' para lógica que pensei
     }
 
     public void registrarDevolucao(String dataDevolucao, String statusLeitura) {

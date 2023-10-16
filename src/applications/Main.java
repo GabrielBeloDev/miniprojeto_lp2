@@ -59,7 +59,7 @@ public class Main {
                     System.out.println("Livro adicionado com sucesso!");
                     break;
 
-                case 2:  // Adicionar revista
+                case 2:
                     System.out.print("Informe o título da revista: ");
                     String tituloRevista = sc.nextLine();
                     System.out.print("Informe o autor da revista: ");
@@ -120,7 +120,7 @@ public class Main {
                     }
                     break;
 
-                case 5:  // Registrar devolução
+                case 5:
                     System.out.print("Informe o nome do usuário que deseja registrar a devolução: ");
                     String nomeUsuarioDevolucao = sc.nextLine();
                     System.out.print("Informe o título do item a ser devolvido: ");

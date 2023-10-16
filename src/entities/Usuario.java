@@ -6,7 +6,7 @@ public class Usuario {
     private String dataNascimento;
     private boolean isAdulto;
 
-    // Construtor
+
     public Usuario(String nome, String cpf, String dataNascimento, boolean isAdulto) {
         this.nome = nome;
         this.cpf = cpf;
